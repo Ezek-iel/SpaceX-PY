@@ -21,7 +21,7 @@ def _get(endpoint, method="", query={}):
         tuple
             returns the response body and headers
     """
-    request_url = "https://api.spacexdata.com/v2/{end}/{meth}".format(
+    request_url = "https://api.spacexdata.com/v4/{end}/{meth}".format(
         end=endpoint, meth=method)
     res = requests.get(request_url, params=query)
 

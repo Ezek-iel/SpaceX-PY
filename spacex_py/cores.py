@@ -3,19 +3,20 @@ from ._helpers._api import _get
 def get_cores(method="", **query):
     """Gets all core parts based on query strings
 
-        Gets all core parts based on query strings
-        from the API
+    This function retrieves all core parts from the SpaceX API
+    based on the provided query strings.
 
     Parameters
     ----------
-        method : str (optional)
-            the method used for the request
-        query : keyword args
-            keyword args based on the API query strings
+    method : str, optional
+        The HTTP method used for the request. Defaults to an empty string.
+    query : keyword arguments
+        Additional query parameters to be included in the request.
 
     Returns
     -------
-        list
-            a list of the core parts
+    list
+        A list of core parts retrieved from the API.
+
     """
-    return _get("parts/cores", method, query)
+    return _get("cores", method, query)

@@ -11,7 +11,7 @@ def get_company_info():
         dict
             a dict of the company information
     """
-    return _get("info")
+    return _get("company")
 
 def get_company_history_info():
     """Gets company history and milestones
@@ -24,17 +24,18 @@ def get_company_history_info():
         list
             a list of the company's historical events and milestones
     """
-    return _get("info/history")
+    return _get("history")
 
 def get_roadster_info():
-    """Gets information and orbital data for Starman Roadster
+    """Gets information and orbital data for Starman Roadster.
 
-        Gets information and orbital data for Starman Roadster
-        from the API (Updated every 10 minutes)
+    This function retrieves information and orbital data for the Starman Roadster
+    from the SpaceX API. The API is updated every 10 minutes.
 
     Returns
     -------
-        dict
-            a dict of the Starman Roadster's information and orbital data
+    dict
+        A dictionary containing the Starman Roadster's information and orbital data.
+
     """
-    return _get("info/roadster")
+    return _get("roadster")

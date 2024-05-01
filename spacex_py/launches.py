@@ -3,20 +3,20 @@ from ._helpers._api import _get
 def get_launches(method="", **query):
     """Gets launches based on query strings
 
-        Gets launches based on query strings from
-        the API
+    This function retrieves launches from the SpaceX API based on query strings.
 
     Parameters
     ----------
-        method : str (optional)
-            the method used for the request
-        query : keyword args
-            keyword args based on the API query strings
+    method : str, optional
+        The method used for the request.
+    query : keyword arguments
+        Keyword arguments based on the API query strings.
 
     Returns
     -------
-        list
-            a list of the launches
+    list
+        A list of the launches.
+
     """
     return _get("launches", method, query)
 
@@ -33,7 +33,7 @@ def get_past_launches(**query):
         list
             a list of previous launches
     """
-    return _get("launches", "", query)
+    return _get("launches", "past", query)
 
 def get_latest_launch(**query):
     """Gets the latest launch
